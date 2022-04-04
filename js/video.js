@@ -16,8 +16,8 @@ document.querySelector("#pause").addEventListener("click", function(){
 });
 
 document.querySelector("#slower").addEventListener("click", function(){
-	var currentSpeed = video.playbackRate;
-	video.playbackRate = currentSpeed - 0.05;
+	var currentSpeed = video.playbackRate -0.05;
+	video.playbackRate = currentSpeed;
 	console.log(currentSpeed);
 });
 
