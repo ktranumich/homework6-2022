@@ -26,3 +26,38 @@ document.querySelector("#faster").addEventListener("click", function(){
 	video.playbackRate = currentSpeed2
 	console.log(currentSpeed2);
 })
+
+document.querySelector("#skip").addEventListener("click", function(){
+	currentTime = video.currentTime;
+	currentTimePlusFifteen = currentTime + 15;
+	if (currentTimePlusFifteen < video.duration){
+		video.currentTime = currentTimePlusFifteen;
+	}
+	else{
+		video.currentTime = 0;
+	}
+	console.log(currentTime);
+})
+
+document.querySelector("#mute").addEventListener("click", function(){
+	console.log(video.muted);
+	if (video.muted == false){
+		video.muted = true;
+	}
+	else{
+		video.muted = false;
+	}
+})
+
+document.querySelector("#slider").addEventListener("click", function(){
+	console.log("Hi");
+})
+
+document.querySelector("#vintage").addEventListener("click", function(){
+	video.classList.add("oldSchool");
+})
+
+document.querySelector("#orig").addEventListener("click", function(){
+	video.classList.remove("oldSchool");
+	console.log("Hi");
+})
