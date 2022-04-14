@@ -2,12 +2,15 @@ var video = document.querySelector("#player1")
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-
+	video.loop = false;
+	video.autoplay = false;
 });
 
 document.querySelector("#play").addEventListener("click", function() {
-	console.log("Play Video");
+	console.log(video.volume);
 	video.play();
+	document.getElementById("#orig").innerHTML = "Meow";
+
 });
 
 document.querySelector("#pause").addEventListener("click", function(){
@@ -59,5 +62,4 @@ document.querySelector("#vintage").addEventListener("click", function(){
 
 document.querySelector("#orig").addEventListener("click", function(){
 	video.classList.remove("oldSchool");
-	console.log("Hi");
 })
